@@ -1,0 +1,392 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  min-height: 760px;
+
+  padding: 60px 35px 90px;
+
+  background: #f8fafc;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  align-items: center;
+  gap: 60px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+
+/* LOGO */
+
+.hero-logo {
+  width: 190px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
+
+/* LABEL */
+
+.hero-label {
+  display: inline-block;
+
+  color: #527eae;
+  font-size: 15px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 18px;
+}
+
+
+/* HEADING */
+
+.hero-content h1 {
+  margin: 0;
+
+  color: #10243d;
+
+  font-size: clamp(55px, 5.5vw, 82px);
+  line-height: 0.98;
+
+  font-weight: 800;
+  letter-spacing: -4px;
+
+  max-width: 760px;
+}
+
+/* DESCRIPTION */
+
+.hero-content > p {
+  max-width: 650px;
+
+  margin: 28px 0;
+
+  color: #6b86a5;
+
+  font-size: 19px;
+  line-height: 1.6;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+
+.hero-button {
+  min-height: 54px;
+
+  padding: 0 23px;
+
+  border: none;
+  border-radius: 10px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+
+.hero-button:hover {
+  transform: translateY(-2px);
+}
+
+
+/* Explore */
+
+.hero-button.primary {
+  background: #10243d;
+  color: #fff;
+
+  box-shadow: 0 10px 25px rgba(16, 36, 61, 0.18);
+}
+
+
+/* Quote */
+
+.hero-button.secondary {
+  background: #f47721;
+  color: white;
+
+  box-shadow: 0 10px 25px rgba(244, 119, 33, 0.18);
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.hero-features {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 22px;
+
+  margin-top: 23px;
+}
+
+.hero-features span {
+  color: #173452;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.hero-visual {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-image-card {
+  position: relative;
+
+  width: 100%;
+  max-width: 620px;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  background: white;
+
+  border: 7px solid white;
+
+  box-shadow:
+    0 25px 60px rgba(16, 36, 61, 0.15);
+}
+
+.hero-image-card img {
+  width: 100%;
+  height: 560px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* IMAGE BADGE */
+
+.hero-image-badge {
+  position: absolute;
+
+  left: 20px;
+  bottom: 20px;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 16px;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border-radius: 13px;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.hero-image-badge span {
+  font-size: 22px;
+}
+
+.hero-image-badge div {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-image-badge strong {
+  color: #10243d;
+  font-size: 14px;
+}
+
+.hero-image-badge small {
+  color: #6b86a5;
+  font-size: 12px;
+}
+/* =========================
+   LARGE DESKTOP
+========================= */
+
+@media (min-width: 1200px) {
+
+  .hero-section {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .hero-container {
+    max-width: 1500px;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 55px;
+  }
+
+  .hero-image-card {
+    max-width: 620px;
+  }
+
+  .hero-image-card img {
+    height: 560px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+  .hero-section {
+    padding: 55px 22px 70px;
+  }
+
+  .hero-container {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-logo {
+    width: 160px;
+  }
+
+  .hero-content h1 {
+    font-size: 58px;
+    letter-spacing: -3px;
+  }
+
+  .hero-content > p {
+    max-width: 600px;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-features {
+    justify-content: center;
+  }
+
+  .hero-visual {
+    max-width: 600px;
+    margin: auto;
+  }
+}
+
+
+/* =========================
+   SMALL PHONE
+========================= */
+
+@media (max-width: 600px) {
+
+  .hero-section {
+    min-height: auto;
+    padding: 35px 18px 60px;
+  }
+
+  .hero-container {
+    gap: 35px;
+  }
+
+  .hero-logo {
+    width: 135px;
+    margin-bottom: 12px;
+  }
+
+  .hero-label {
+    font-size: 11px;
+    letter-spacing: 1.3px;
+  }
+
+  .hero-content h1 {
+    font-size: 43px;
+    line-height: 1.02;
+    letter-spacing: -2px;
+  }
+
+  .hero-content > p {
+    font-size: 16px;
+    line-height: 1.55;
+    margin: 20px 0;
+  }
+
+  .hero-buttons {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .hero-button {
+    width: 100%;
+  }
+
+  .hero-features {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .hero-image-card {
+    border-radius: 20px;
+  }
+
+  .hero-image-card img {
+    height: 350px;
+  }
+
+  .hero-image-badge {
+    left: 12px;
+    bottom: 12px;
+  }
+}
